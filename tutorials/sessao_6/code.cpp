@@ -10,7 +10,16 @@ using namespace std;
 
 // when creating a class by default any varaible will be considered private
 
-class employee{
+
+
+// Abstraction Method - Showing only relevant information to the outside world
+class AbstractEmployee {
+    // Pure virtual function - Force the derived classes to use this function 
+    virtual void AskForPromotion()=0;
+};
+
+
+class employee : AbstractEmployee{
 
     // Encapsulation Method  -  By encapsulating these functions ( getters and setters) we are protecting the data from change
     private:
@@ -59,6 +68,15 @@ class employee{
             cout << "Age: " << Age << endl;
         }
 
+        void AskForPromotion(){
+            if(Age > 30){
+                cout << Name << " got promoted !\n";
+            }
+            else{
+                cout << Name << " is not available for promotion !\n";
+            }
+        }
+
 
         // A constructor will not have a return type
         // A constructor will have the same name of the class that it belongs to
@@ -74,17 +92,11 @@ class employee{
 int main(){
     
     // Assigning the values of the object using the constructor we built
-    employee funcionario_1 = employee("Robert", "Google", 27);
-    funcionario_1.introduceYourself();
-
-
+    employee funcionario_1 = employee("Robert", "Google", 31);
     employee funcionario_2 = employee("Sousa", "Apple", 17);
-    funcionario_2.introduceYourself();
-
-
-    funcionario_1.setAge(17);
-    cout << "Employee 1 is " << funcionario_1.getAge() << " years old !\n";
-
+    
+    funcionario_1.AskForPromotion();
+    funcionario_2.AskForPromotion();
     
 
     return 0;
