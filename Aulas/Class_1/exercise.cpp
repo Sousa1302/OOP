@@ -32,7 +32,7 @@ class Fatura{
         }
 };
 
-
+                             
 
 int main(){
     Fatura fatura_1("GonçaloRaposoSousa");    // Instancear a classe 
