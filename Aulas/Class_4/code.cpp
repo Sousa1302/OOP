@@ -14,19 +14,11 @@ namespace abc{
     }
 }
 
-class Refrigerante{
-    public:
-        string brand;
-        string sabor;
-        string capacidade;
-        string valor;
-        string nutricao;
-        
-
-};
 
 int main(){
+    
     abc::teste();   // namespaces
     xpto::teste();
+    
     return 0;
 }
