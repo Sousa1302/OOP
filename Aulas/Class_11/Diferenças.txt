@@ -1,0 +1,5 @@
+                Vector  |   Lista   |   Stack
+                        |           |
+Pode Alterar       1º         1º         1º
+(indices)         ult        ult        ult
+              intermedio
